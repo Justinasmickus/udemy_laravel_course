@@ -16,7 +16,7 @@ class CompaniesTableSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('companies')->truncate(); // resets db table
+        // DB::table('companies')->delete(); // resets db table
 
         $companies = [];
         $faker = Faker::create();
