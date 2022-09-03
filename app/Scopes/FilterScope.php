@@ -13,10 +13,6 @@ class FilterScope implements Scope
         if ($companyId = request('company_id')) {
             $builder->where('company_id', $companyId);
         }
-
-        if($search = request('search')){
-            $builder->where('first_name','LIKE',"%{$search}%");
-        }
     }
 
 }
