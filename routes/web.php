@@ -1,8 +1,9 @@
 <?php
 
-use App\Http\Controllers\ContactController;
 use App\Models\Contact;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ContactController;
 
 
 /*
@@ -34,3 +35,7 @@ Route::delete('/contacts/{id}', [ContactController::class, 'destroy'])->name('co
 
 Route::get('/contacts/{id}/edit', [ContactController::class, 'edit'])->name('contacts.edit');
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
